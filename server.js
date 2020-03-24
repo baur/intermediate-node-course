@@ -11,6 +11,10 @@ app.listen(port, () => {
   console.log(`server is listening on port:${port}`);
 });
 
+const User = require('./models/User');
+
+mongoose.connect('mongodb://localhost/userData');
+
 // CREATE
 app.post('/users', (req, res) => {
   // User.create()
